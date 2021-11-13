@@ -26,7 +26,6 @@ Bi-LSTM (test accuracy:0.7176923076923077) #The training accuracy says it's 84 %
 
 Bi-Ind-RNN with 0.1 dropout after dense layer(test accuracy  0.74)
 
-Bi-Ind-RNN with 0.1 dropout after dense layer(test accuracy  0.74)
 Bi-Ind-RNN with no dropout (test accuracy  0.736)
 
 Multi-directional(4 directions including skip) Ind-RNN (test accuray 0.693)
