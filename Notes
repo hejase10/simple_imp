@@ -1,0 +1,34 @@
+My files are missing a lot. I was still working on writing my base code for my project. I have finished the task of writing my base code which
+I will use to finish my project. I have implemented a deep bi-directional and multi-directional ind-rnn and a bi-directional lstm. I'm wrapping up right now
+the implementation of lstms and ind-rnns with attention. I'm currently using word2vec embedding but I'm experimenting right now with pretrained  glove and  bert embeddings. 
+I'm also running experiments on different dropout methods such as variational dropout which I will include as experiments in
+my project because I had problems with dropout in the reccurent hidden states where it was making the model very noisy. I noticed that ind-rnn has much less parameters
+than lstm, converges faster, and is able to return better accuracy. I tried four directional 2 layer ind-rnn but it didn't return any better results than a 
+bi-directional 2 layer ind-rnn. 
+
+The accuracy metric used in these initial experiments is the number of correctly classified samples. In my experiments, I'm going to use the F1 metric scores. I 
+will include in my project report the loss graphs and accuracy graphs and their change across epochs. 
+
+
+I'm also looking into the focal loss function to replace the cross-entropy since there's class imbalance in the dataset.
+
+These files are still missing a lot of stuff but I have finished writing up my code. 
+
+The dataset used in the bi-lstm vs. bi-ind-rnn files I uploaded is the Spooky Author Identification Kaggle competetion dataset. It consists of sentences and three
+author labels. Since the test dataset labels aren't available for public I used a subset of my training dataset as a test dataset. In my experiments, use of 10 %,
+20 % , or 30 % of my training dataset as a subset didn't make any difference in accuracy probably because the amount of class imbalance is the same across these
+subsets. In my initial experiments, I also used batch size of one since it avoids the need for padding the variable-length sentences. I used the pytorch
+libraries for implementation of batch size > 0 which was much faster but returned the same accuracy. I will however for the project report change that. 
+
+
+Bi-LSTM (test accuracy:0.7176923076923077) #The training accuracy says it's 84 % since the test accuracy actually decreases past that even with dropout after the dense layer.
+
+
+Bi-Ind-RNN with 0.1 dropout after dense layer(test accuracy  0.74)
+
+Bi-Ind-RNN with 0.1 dropout after dense layer(test accuracy  0.74)
+Bi-Ind-RNN with no dropout (test accuracy  0.736)
+
+Multi-directional(4 directions including skip) Ind-RNN (test accuray 0.693)
+
+
